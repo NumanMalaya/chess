@@ -1,0 +1,173 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+#player-names {
+    display: flex;
+    margin: 10px;
+    font-size: 18px; /* Slightly smaller font size for player names */
+}
+
+.player {
+    background-color: #ffffff;
+    padding: 5px 15px; /* Reduced padding for smaller screens */
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #333;
+    text-align: center;
+    margin: 0px 5px;
+}
+
+.player.active {
+    transform: scale(1.2);
+    background-color: #9af29a;
+}
+
+#gameboard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    border: 2px solid #333;
+    width: 100%;
+    max-width: 480px; /* Limit the width on larger screens */
+    margin-bottom: 20px;
+}
+
+.square {
+    width: 100%;
+    height: auto;
+    padding-bottom: 100%; /* Makes the squares responsive and maintain aspect ratio */
+    position: relative; /* To maintain the square layout */
+    border: 1px solid #333;
+}
+
+.square .piece {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5vw; /* Responsive font size for pieces */
+}
+
+.white {
+    background-color: #e4e4e4;
+}
+
+.black {
+    background-color: #b58863;
+}
+
+.highlight {
+    background-color: rgb(183, 227, 72) !important;
+}
+
+.piece {
+    cursor: grab;
+    line-height: 1;
+    position: relative;
+}
+
+.piece-white {
+    color: white;
+    filter: drop-shadow(0px 0px 1px black);
+}
+
+.piece-black {
+    color: black;
+}
+
+.selected {
+    background-color: rgb(183, 227, 72);
+}
+
+#winner {
+    margin-top: 20px;
+    font-size: 20px;
+    color: red;
+}
+
+/* Modal styles */
+#modal, #check-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px; 
+}
+
+#modal-content, #check-modal-content {
+    background-color: white;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; 
+    max-width: 300px; 
+    text-align: center;
+    border-radius: 10px;
+}
+
+#modal-content h2, #check-modal-content h2 {
+    margin: 0;
+    color: #333;
+}
+
+#modal-content p, #check-modal-content p {
+    margin: 15px 0;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Check alert specific styles */
+#check-modal-content {
+    background-color: #ffeb3b; /* Yellow background for alert */
+    color: #000;
+    border: 2px solid #fbc02d; /* Darker yellow border */
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 600px) {
+    #player-names {
+        font-size: 16px; /* Reduce font size for players on small screens */
+    }
+
+    .player {
+        padding: 5px 10px; /* Smaller padding for mobile */
+    }
+
+    .square .piece {
+        font-size: 5vw; /* Larger piece font size for smaller screens */
+    }
+
+    #modal-content, #check-modal-content {
+        width: 90%; /* Full width modal on small screens */
+        padding: 15px;
+    }
+
+    .close {
+        font-size: 24px; /* Adjust close button size */
+    }
+}

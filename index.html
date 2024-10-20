@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chess Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="player-names">
+        <div class="player" id="white-player">White</div>
+        <div class="player" id="black-player">Black</div>
+    </div>
+
+    <div id="gameboard"></div>
+    
+    <!-- Modal for winning alert -->
+    <div id="modal">
+        <div id="modal-content">
+            <span class="close">&times;</span>
+            <h2>Congratulations!</h2>
+            <p id="winner"></p>
+        </div>
+    </div>
+    
+    <!-- Modal for check alert -->
+    <div id="check-modal">
+        <div id="check-modal-content">
+            <h2>Check!</h2>
+            <p id="check-message"></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body> 
+</html>
