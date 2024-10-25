@@ -84,7 +84,7 @@ body {
 }
 
 .selected {
-    background-color: rgb(183, 227, 72);
+    color: rgb(183, 227, 72);
 }
 
 #winner {
