@@ -403,7 +403,7 @@ function showCheckAlert(opponent) {
         checkModal.style.display = "block"; // Show the check alert
         setTimeout(() => {
             checkModal.style.display = "none"; // Hide the alert after 2 seconds
-        }, 3000);
+        }, 2000);
     }, 100); // Small delay before showing the alert
 }
 
