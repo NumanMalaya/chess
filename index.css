@@ -190,4 +190,8 @@ body {
     .close {
         font-size: 24px; /* Adjust close button size */
     }
+
+    .checkmate-indicator::after {
+        font-size: 10vw;
+    }
 }
