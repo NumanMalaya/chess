@@ -192,6 +192,6 @@ body {
     }
 
     .checkmate-indicator::after {
-        font-size: 10vw;
+        font-size: 100vw;
     }
 }
