@@ -178,6 +178,7 @@ body {
 @media (max-width: 600px) {
     #player-names {
         font-size: 16px; /* Reduce font size for players on small screens */
+        margin: 80px 0px 40px;
     }
 
     .player {
