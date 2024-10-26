@@ -127,6 +127,21 @@ body {
     margin: 15px 0;
 }
 
+#restart-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#restart-btn:hover {
+    background-color: #45a049;
+}
+
 .close {
     color: #aaa;
     float: right;
@@ -146,6 +161,16 @@ body {
     background-color: #ffeb3b; /* Yellow background for alert */
     color: #000;
     border: 2px solid #fbc02d; /* Darker yellow border */
+}
+
+/* Checkmate Indicator */
+.checkmate-indicator::after {
+    content: "⚔️"; /* Crossed swords emoji */
+    font-size: 3vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Media queries for smaller screens */
